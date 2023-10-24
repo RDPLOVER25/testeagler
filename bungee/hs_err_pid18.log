@@ -1,0 +1,187 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007f34273869fc, pid=18, tid=0x00007f3424e37640
+#
+# JRE version: OpenJDK Runtime Environment (8.0_302-b07) (build 1.8.0_302-b07)
+# Java VM: OpenJDK 64-Bit Server VM GraalVM CE 21.2.0 (25.302-b07-jvmci-21.2-b08 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x4a89fc]  PerfTraceTime::~PerfTraceTime()+0x4c
+#
+# Core dump written. Default location: /home/runner/justbungee/bungee/core or core.18
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/oracle/graal/issues
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f34200da800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=23, stack(0x00007f3424d37000,0x00007f3424e38000)]
+
+siginfo: si_signo: 7 (SIGBUS), si_code: 2 (BUS_ADRERR), si_addr: 0x00007f3426833cd0
+
+Registers:
+RAX=0x00007f3426833cd0, RBX=0x00007f3424e35eb0, RCX=0x0000000000000000, RDX=0x0000000000000186
+RSP=0x00007f3424e35e60, RBP=0x00007f3424e35e70, RSI=0x0000000000000000, RDI=0x0000000000000000
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000000
+R12=0x00007f3424e35eb0, R13=0x00007f3425705890, R14=0x00007f3427fb74f0, R15=0x000000007fdb04ed
+RIP=0x00007f34273869fc, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000006
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f3424e35e60)
+0x00007f3424e35e60:   00007f3411149d10 00007f34200da800
+0x00007f3424e35e70:   00007f3424e35f30 00007f3427a34878
+0x00007f3424e35e80:   00007f3424e35ed0 00007f34271b79b4
+0x00007f3424e35e90:   0000000000000000 0000000000000000
+0x00007f3424e35ea0:   0000000000000000 0000000000000000
+0x00007f3424e35eb0:   0000000000000186 000002f5fe5a7279
+0x00007f3424e35ec0:   00007f3420058f00 00007f34200185f0
+0x00007f3424e35ed0:   0000000000000000 00007f342794d5f3
+0x00007f3424e35ee0:   00007f3420021ad0 00007f3420056270
+0x00007f3424e35ef0:   0000000000000000 00007f34200da800
+0x00007f3424e35f00:   00007f3420021ad0 00007f34200da800
+0x00007f3424e35f10:   00007f3420021ad0 0000000000000000
+0x00007f3424e35f20:   0000000000000000 000000007fdb04ed
+0x00007f3424e35f30:   00007f3424e36010 00007f3427a3538e
+0x00007f3424e35f40:   0000000000000000 00007f34200059e0
+0x00007f3424e35f50:   00007f34000002e7 7fdb04ed00000000
+0x00007f3424e35f60:   00007f34200d79a0 0000000000000001
+0x00007f3424e35f70:   00007f3424e35f90 00000000000002e7
+0x00007f3424e35f80:   0000000000000000 00007f3425705890
+0x00007f3424e35f90:   00007f34200da800 00007f34200d79a0
+0x00007f3424e35fa0:   0000000000000000 0000000000000000
+0x00007f3424e35fb0:   0000000000000000 0000000000000000
+0x00007f3424e35fc0:   0000000000000000 0000000000000000
+0x00007f3424e35fd0:   0000000000000000 0000000000000000
+0x00007f3424e35fe0:   0000000000000000 00007f3425705890
+0x00007f3424e35ff0:   0000000000000001 0000000000000170
+0x00007f3424e36000:   00007f3425705890 00007f34200da800
+0x00007f3424e36010:   00007f3424e36080 00007f3427a35b52
+0x00007f3424e36020:   0000000000000000 0000000000000000
+0x00007f3424e36030:   0000000000000000 0000000000000000
+0x00007f3424e36040:   0000000000000000 00007f34278a30f2
+0x00007f3424e36050:   0000000000000000 00007f3424e367c0 
+
+Instructions: (pc=0x00007f34273869fc)
+0x00007f34273869dc:   1f 44 00 00 55 48 89 e5 53 48 89 fb 48 83 ec 08
+0x00007f34273869ec:   e8 1f fa 6e 00 48 8b 43 18 48 8b 13 48 8b 40 28
+0x00007f34273869fc:   48 01 10 48 83 c4 08 5b 5d c3 90 90 90 90 90 90
+0x00007f3427386a0c:   90 90 90 90 55 48 89 e5 41 56 41 55 4c 8d 6f 38 
+
+Register to memory mapping:
+
+RAX=0x00007f3426833cd0 is an unknown value
+RBX=0x00007f3424e35eb0 is pointing into the stack for thread: 0x00007f34200da800
+RCX=0x0000000000000000 is an unknown value
+RDX=0x0000000000000186 is an unknown value
+RSP=0x00007f3424e35e60 is pointing into the stack for thread: 0x00007f34200da800
+RBP=0x00007f3424e35e70 is pointing into the stack for thread: 0x00007f34200da800
+RSI=0x0000000000000000 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000000 is an unknown value
+R12=0x00007f3424e35eb0 is pointing into the stack for thread: 0x00007f34200da800
+R13=0x00007f3425705890 is an unknown value
+R14=0x00007f3427fb74f0: <offset 0x10d94f0> in /nix/store/x26gyx3nb3kx580i4r9qg9q1iw45xbp9-graalvm8-ce/jre/lib/amd64/server/libjvm.so at 0x00007f3426ede000
+R15=0x000000007fdb04ed is an unknown value
+
+
+Stack: [0x00007f3424d37000,0x00007f3424e38000],  sp=0x00007f3424e35e60,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x4a89fc]  PerfTraceTime::~PerfTraceTime()+0x4c
+V  [libjvm.so+0xb56878]  SystemDictionary::load_instance_class(Symbol*, Handle, Thread*)+0x1e8
+V  [libjvm.so+0xb5738e]  SystemDictionary::resolve_instance_class_or_null(Symbol*, Handle, Handle, Thread*)+0x94e
+V  [libjvm.so+0xb57b52]  SystemDictionary::resolve_or_fail(Symbol*, Handle, Handle, bool, Thread*)+0x22
+V  [libjvm.so+0x4eeb88]  ConstantPool::klass_at_impl(constantPoolHandle, int, Thread*)+0x328
+V  [libjvm.so+0x6a4053]  InterpreterRuntime::_new(JavaThread*, ConstantPool*, int)+0xa3
+j  sun.misc.Signal.dispatch(I)V+25
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x6b7b5d]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0xc5d
+V  [libjvm.so+0x6b6663]  JavaCalls::call_static(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x223
+V  [libjvm.so+0xa0ae9b]  signal_thread_entry(JavaThread*, Thread*)+0x24b
+V  [libjvm.so+0xb8613b]  JavaThread::thread_main_inner()+0xdb
+V  [libjvm.so+0xb86409]  JavaThread::run()+0x299
+V  [libjvm.so+0xa13d02]  java_start(Thread*)+0x102
+C  [libpthread.so.0+0x8d3e]  start_thread+0xce
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.misc.Signal.dispatch(I)V+25
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f342041a800 JavaThread "Netty IO Thread #0" [_thread_in_native, id=50, stack(0x00007f33be7ff000,0x00007f33be900000)]
+  0x00007f33b8018000 JavaThread "WebSocketWorker-21" [_thread_blocked, id=49, stack(0x00007f33becfd000,0x00007f33bedfe000)]
+  0x00007f33b8016800 JavaThread "connectionLostChecker-1" [_thread_blocked, id=48, stack(0x00007f33bedfe000,0x00007f33beeff000)]
+  0x00007f34203d9800 JavaThread "WebSocketSelector-22" [_thread_in_native, id=47, stack(0x00007f33beeff000,0x00007f33bf000000)]
+  0x00007f34203c8000 JavaThread "MOTD Tick Timer" [_thread_blocked, id=45, stack(0x00007f33cc4ff000,0x00007f33cc600000)]
+  0x00007f33e803d800 JavaThread "Libgraal MBean Registration" daemon [_thread_blocked, id=43, stack(0x00007f33cdeff000,0x00007f33ce000000)]
+  0x00007f342035c800 JavaThread "BungeeCord Logger Thread - net.md_5.bungee.log.BungeeLogger@27808f31" [_thread_blocked, id=42, stack(0x00007f33cebff000,0x00007f33ced00000)]
+  0x00007f342033d800 JavaThread "NonBlockingInputStreamThread" daemon [_thread_blocked, id=41, stack(0x00007f33cf8ff000,0x00007f33cfa00000)]
+  0x00007f34202c0000 JavaThread "Auth Timeout" [_thread_blocked, id=34, stack(0x00007f33e61fc000,0x00007f33e62fd000)]
+  0x00007f34202be800 JavaThread "Close Inactive WebSockets" [_thread_blocked, id=33, stack(0x00007f33e62fd000,0x00007f33e63fe000)]
+  0x00007f34202bd000 JavaThread "Ban List Reload" [_thread_blocked, id=32, stack(0x00007f33e63fe000,0x00007f33e64ff000)]
+  0x00007f34202bc000 JavaThread "Reconnect Saver" [_thread_blocked, id=31, stack(0x00007f33e64ff000,0x00007f33e6600000)]
+  0x00007f34200ed000 JavaThread "Service Thread" daemon [_thread_blocked, id=26, stack(0x00007f342482e000,0x00007f342492f000)]
+  0x00007f34200df800 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=25, stack(0x00007f3424930000,0x00007f3424b30000)]
+  0x00007f34200dd800 JavaThread "JVMCI-native CompilerThread0" daemon [_thread_blocked, id=24, stack(0x00007f3424b31000,0x00007f3424d31000)]
+=>0x00007f34200da800 JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=23, stack(0x00007f3424d37000,0x00007f3424e38000)]
+  0x00007f34200a7800 JavaThread "Finalizer" daemon [_thread_blocked, id=22, stack(0x00007f342511e000,0x00007f342521f000)]
+  0x00007f34200a3000 JavaThread "Reference Handler" daemon [_thread_blocked, id=21, stack(0x00007f342521f000,0x00007f3425320000)]
+
+Other Threads:
+  0x00007f342009b800 VMThread [stack: 0x00007f3425321000,0x00007f3425421000] [id=20]
+  0x00007f34200f2800 WatcherThread [stack: 0x00007f342471e000,0x00007f342481e000] [id=27]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f3420008f40] Threads_lock - owner thread: 0x00007f342000a800
+
+heap address: 0x00000000c0000000, size: 1024 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ def new generation   total 314560K, used 223695K [0x00000000c0000000, 0x00000000d5550000, 0x00000000d5550000)
+  eden space 279616K,  80% used [0x00000000c0000000, 0x00000000cda73df0, 0x00000000d1110000)
+  from space 34944K,   0% used [0x00000000d1110000, 0x00000000d1110000, 0x00000000d3330000)
+  to   space 34944K,   0% used [0x00000000d3330000, 0x00000000d3330000, 0x00000000d5550000)
+ tenured generation   total 699072K, used 0K [0x00000000d5550000, 0x0000000100000000, 0x0000000100000000)
+   the space 699072K,   0% used [0x00000000d5550000, 0x00000000d5550000, 0x00000000d5550200, 0x0000000100000000)
+ Metaspace       used 19674K, capacity 19978K, committed 20352K, reserved 1067008K
+  class space    used 2239K, capacity 2352K, committed 2432K, reserved 1048576K
+
+Card table byte_map: [0x00007f3426067000,0x00007f3426268000] byte_map_base: 0x00007f3425a67000
+
+Polling page: 0x00007f342684f000
+
+CodeCache: size=245760Kb used=5378Kb max_used=5388Kb free=240381Kb
+ bounds [0x00007f3411000000, 0x00007f3411560000, 0x00007f3420000000]
+ total_blobs=1952 nmethods=1503 adapters=365
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+
+JVMCI Events (8 events):
+Event: 0.269 Thread 0x00007f342000a800 created new JVMCI runtime 0 (0x00007f342007b900)
+Event: 0.269 Thread 0x00007f342000a800 created new JVMCI runtime -1 (0x00007f3420096570)
+Event: 0.728 Thread 0x00007f34200dd800 loaded JVMCI shared library from /nix/store/x26gyx3nb3kx580i4r9qg9q1iw45xbp9-graalvm8-ce/jre/lib/amd64/libjvmcicompiler.so
+Event: 0.874 Thread 0x00007f34200dd800 created JavaVM[1]@0x00007f3410a92798 for JVMCI runtime 0
+Event: 0.951 Thread 0x00007f34200dd800 initializing JVMCI runtime 0
+Event: 1.012 Thread 0x00007f34200dd800 initialized JVMCI runtime 0
+Event: 2.244 Thread 0x00007f33e8001000 initializing JVMCI runtime -1
+Event: 2.459 Thread 0x00007f33e8001000 initialized JVMCI runtime -1
+
+Compilation events (10 events):
+Event: 2717.563 Thread 0x00007f34200dd800 1662       4       java.util.regex.Matcher::<init> (84 bytes)
+Event: 2717.578 Thread 0x00007f34200dd800 nmethod 1662 0x00007f3411128dd0 code [0x00007f3411128f40, 0x00007f3411129458]
+Event: 2754.377 Thread 0x00007f34200dd800 1664       4       java.util.concurrent.ConcurrentLinkedQueue::first (65 bytes)
+Event: 2754.380 Thread 0x00007f34200dd800 nmethod 1664 0x00007f341112b9d0 code [0x00007f341112bb20, 0x00007f341112bbe0]
+Event: 2757.381 Thread 0x00007f34200dd800 1665       4       io.netty.util.concurrent.SingleThreadEventExecutor::hasTasks (39 bytes)
+Event: 2757.385 Thread 0x00007f34200dd800 nmethod 1665 0x00007f341112a410 code [0x00007f341112a560, 0x00007f341112a670]
+Event: 2902.985 Thread 0x00007f34200df800 1666       3       java.util.concurrent.locks.ReentrantLock$NonfairSync::tryAcquire (6 bytes)
+Event: 2902.985 Thread 0x00007f34200df800 nmethod 1666 0x00007f341112a090 code [0x00007f341112a200, 0x00007f341112a388]
+Event: 2902.985 Thread 0x00007f34200df800 1667       3       java.util.concurrent.locks.ReentrantLock$Sync::nonfairTryAcquire (67 bytes)

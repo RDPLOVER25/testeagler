@@ -1,0 +1,24 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007f261fb5f44a, pid=20, tid=0x00007f2608511640
+#
+# JRE version: OpenJDK Runtime Environment (8.0_302-b07) (build 1.8.0_302-b07)
+# Java VM: OpenJDK 64-Bit Server VM GraalVM CE 21.2.0 (25.302-b07-jvmci-21.2-b08 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libc.so.6+0x15a44a]  __strncpy_avx2+0x5ca
+#
+# Core dump written. Default location: /home/runner/justbungee/bungee/core or core.20
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/oracle/graal/issues
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f2618164800):  JavaThread "JVMCI-native CompilerThread0" daemon [_thread_in_vm, id=29, stack(0x00007f2608312000,0x00007f2608512000)]
+
+siginfo: si_signo: 7 (SIGBUS), si_code: 2 (BUS_ADRERR), si_addr: 0x00007f261e222f13
+
+Registers:
+RAX=0x00007f261e222f13, RBX=0x00007f2618164490, RCX=0x0000000000000010

@@ -1,0 +1,10 @@
+{
+	"frame1": { 
+		"icon": "server-icon.png",
+		"icon_spriteX": 0,
+		"icon_spriteY": 0,
+		"online": "default",
+		"max": "69",
+		"players": "default",
+		"text0": "A Jackson Server",
+		"text1": "Mid Seventh Grade"
